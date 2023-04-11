@@ -21,10 +21,11 @@ export const checkAuth = createAsyncThunk<any, undefined, { rejectValue: string 
   async (_, thunkApi) => {
     try {
       const state: any = thunkApi.getState();
+      const ethereum = typeof window !== 'undefined' ? window.ethereum : null
       const message = state.auth.message;
       const signature = sessionStorage.getItem('access_token');
       const verify = verifyMessage(message as string, signature as string);
-      const provider = new ethers.BrowserProvider(window.ethereum);
+      const provider = new ethers.BrowserProvider(ethereum);
       const signer = await provider.getSigner();
       const address = await signer.getAddress();
 
