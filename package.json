@@ -9,21 +9,35 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-cloud/vision": "^3.1.2",
+    "@reduxjs/toolkit": "^1.9.3",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "ethers": "^6.3.0",
+    "framer-motion": "^10.11.2",
     "next": "13.3.0",
     "postcss": "8.4.21",
     "react": "18.2.0",
     "react-color": "^2.19.3",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
     "@types/react-color": "^3.0.6"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "child_process": false,
+    "net": false,
+    "tls": false,
+    "request": false,
+    "path": false
   }
 }
