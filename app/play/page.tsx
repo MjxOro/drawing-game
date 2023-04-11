@@ -70,7 +70,7 @@ const Page: FC<pageProps> = ({}) => {
           <nav className='md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center'>
             <button onClick={handleSubmit} className='mr-5 hover:text-gray-900 bg-gray-900 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'>AI Guess</button>
             <button  onClick={clear} className='mr-5 hover:text-gray-900 bg-gray-900 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'>Clear Canvas</button>
-            <button style={{backgroundColor: color}}
+            <button style={{backgroundColor: color, zIndex: isShow ? -10 : undefined}}
             onClick={() => setToggleColor(true)}
             className={`relative w-12 h-12 rounded-full`}
              />
