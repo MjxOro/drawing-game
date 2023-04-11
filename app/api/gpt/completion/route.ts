@@ -13,7 +13,7 @@ export async function POST(request: Request) {
        model: "text-davinci-003",
         prompt: prompt,
         temperature: 1,
-        max_tokens: 192,
+        max_tokens: 130,
         top_p: 1,
         best_of: 5,
         frequency_penalty: 2,
