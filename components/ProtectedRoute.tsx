@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }:any) => {
   const router = useRouter();
   const dispatch = useAppDispatch();
   const { isAuth, isLoading } = useAppSelector(state => state.auth)
-  const token = sessionStorage.getItem('access_token')
+  const token = window.sessionStorage.getItem('access_token')
 
   useEffect(() => {
     dispatch(checkAuth())
