@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.bg-image {
+  background-image: url('/images/landing_bg.png');
+}
+.bg-image-2 {
+  background-image: url('/images/landing_bg_2.png');
+}
+.bg-image-2 {
+  background-image: url('/images/landing_bg_3.png');
+}
