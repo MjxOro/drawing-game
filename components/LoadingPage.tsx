@@ -21,7 +21,7 @@ const RotatingCircle: React.FC = () => {
   );
 };
 
-const LoadingText: React.FC = () => {
+const LoadingText: React.FC<{message: string}> = ({message}) => {
   const textVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'reverse' } },
@@ -34,16 +34,16 @@ const LoadingText: React.FC = () => {
       animate="visible"
       variants={textVariants}
     >
-      Loading...
+      {message}
     </motion.h1>
   );
 };
 
-const LoadingPage: React.FC = () => {
+const LoadingPage: React.FC<{loadingMessage: string}> = ({loadingMessage}) => {
   return (
     <div className="min-h-screen min-w-screen flex flex-col items-center justify-center bg-white">
       <RotatingCircle />
-      <LoadingText />
+      <LoadingText message={loadingMessage} />
     </div>
   );
 };
