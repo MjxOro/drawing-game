@@ -2,14 +2,11 @@
 
 import { connect } from './GlobalRedux/Features/auth/authSlice';
 import { useAppDispatch } from '../hooks/useRedux';
-import { useRouter } from 'next/navigation';
 
 const Page = () => {
   const dispatch = useAppDispatch();
-  const router = useRouter();
   const handleConect = async () => {
     await dispatch(connect());
-    router.push('/play');
   };
 
   return (
